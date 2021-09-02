@@ -13,11 +13,11 @@ The UR Configuration is written in [Harness JSON](harness_json.md) (JSON extende
  - **Engine key-value pairs** The settings outside of a named section that are required or may be used in any engine.
  - **`dataset`** params that apply to input data encoded as events
  - **`algorithm`** params that control the behavior of the UR algorithm, known as Correlated Cross-Occurrence (CCO). The Algorithm section also can hold default Query parameters to be used with all Queries unless overridden in a specific Query.
- - **`sparkConf`** params are passed into the Spark Job. These are needed because Spark jobs often require settings to be passed in to Spark Workers via a data structure called `sparkConf`. For instance the Elasticsearch library that writes a Spark RDD to ES needs several settings that it gets from the `soarkConf`. This section is the mostlikely place to put extended JSON that reads from `env`.
+ - **`sparkConf`** params are passed into the Spark Job. These are needed because Spark jobs often require settings to be passed in to Spark Workers via a data structure called `sparkConf`. For instance the Elasticsearch library that writes a Spark RDD to ES needs several settings that it gets from the `sparkConf`. This section is the most likely place to put extended JSON that reads from `env`.
 
 ## Simplest UR Configuration
 
-Imagine an ECom version of the UR that only watches for "buys" and product detail "views". To be sure there are many other ways to use a recommender but this is a good, simple example.
+Imagine an ECom version of the UR that only watches for "buys" and product detail "views". Surely, there are many other ways to use a recommender but this is a good, simple example.
 
 We will make heavy use of default settings that have been chosen in the Universal Recommender code and only set required config and parameters.
 

@@ -6,7 +6,7 @@ The Universal Recommender input is formed of what are called "indicators" becaus
     
     - **Primary indicators**: This is required by the UR algorithm. It is a record of the type of thing you want to recommend&mdash;buy, play, watch, read, etc. This should include the items from which you will recommend.
     
-    - **Secondary events**: These encode anything else we know about the user that we think may be an indicator of taste&mdash;category or genre preference, location, pageviews, location, user profile data, tag preference, likes, follows, shares, even search terms.
+    - **Secondary events**: These encode anything else we know about the user that we think may be an indicator of taste&mdash;category or genre preference, location, pageviews, user profile data, tag preference, likes, follows, shares, even search terms.
     
  2. **Item property changes** are always tied to items and are used to set, change, or unset properties of items. User properties are not supported with property change events only through  preference indicators/usage events.
  
@@ -36,7 +36,7 @@ An ECommerce Primary Indicator might look like this:
 
 Rules for Indicators are:
 
- - **event**: the value must be one the `"name"`s in the `"indicators"` array from the UR engine's JSON config.
+ - **event**: the value must be one of the `"name"`s in the `"indicators"` array from the UR engine's JSON config.
  - **entityType**: This is **always** "user", do not use any other type for indicators. 
  - **entityId**: This is whatever string you use to identify a user.
  - **targetEntityType**: This is **always** "item", do not use any other type for indicators.
